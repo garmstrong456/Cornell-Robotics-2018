@@ -15,21 +15,15 @@
 #include <BambotAHRS.h>
 #include <Wire.h>
 
-Mahony AHRSfilter;
+GregMahony AHRSfilter;
 MPU9250 IMU;
-
-const int magBiasX = 470;
-const int magBiasY = 120;
-const int magBiasZ = 125;
 
 void setup() {
   M5.begin();   //initialize the M5
   Wire.begin(); //Start I2C communication
 
-  //initialize the MPU
   IMU.calibrateMPU9250(IMU.gyroBias, IMU.accelBias);
   IMU.initMPU9250();
-  IMU.initAK8963(IMU.magCalibration);
 
   //Set up the LCD to display pitch, yaw, roll and time between readings
   M5.Lcd.setCursor(0, 0,2); M5.Lcd.print("P: ");
@@ -73,6 +67,7 @@ void readAndScaleIMU() {
 
   IMU.readGyroData(IMU.gyroCount);
   IMU.getGres();
+
   IMU.gx = (float)IMU.gyroCount[0]*IMU.gRes;
   IMU.gy = (float)IMU.gyroCount[1]*IMU.gRes;
   IMU.gz = (float)IMU.gyroCount[2]*IMU.gRes;
