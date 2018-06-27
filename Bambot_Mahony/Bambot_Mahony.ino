@@ -15,7 +15,7 @@
 #include <BambotAHRS.h>
 #include <Wire.h>
 
-GregMahony AHRSfilter;
+Mahony AHRSfilter;
 MPU9250 IMU;
 
 void setup() {
