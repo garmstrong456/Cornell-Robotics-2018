@@ -1,9 +1,23 @@
+
+/*
+ * mag_calibration
+ * 
+ * Greg Armstrong June 2018
+ * 
+ * A simple sketch used to calibrate the magnetometer
+ * 
+ * Run this sketch then gently rotate the robot in a figure 8 pattern
+ * The sketch will record the max and min magnetometer values and automatically
+ * calculate the offset and scale corrections
+*/
+
 #include <M5Stack.h>
 #include "utility/MPU9250.h"
 #include "utility/quaternionFilters.h"
 
 
 MPU9250 IMU;
+
 float maxx = -10.0E10, minx = 10.0E10;
 float maxy = -10.0E10, miny = 10.0E10;
 float maxz = -10.0E10, minz = 10.0E10;
@@ -11,15 +25,17 @@ float scalex, scaley, scalez;
 float biasx, biasy, biasz;
 
 void setup(){
-  
+  //Always call this first to avoid problems  
   M5.begin();
   Wire.begin();
-  
+
+  //Initialize the MPU
   IMU.MPU9250SelfTest(IMU.SelfTest);
   IMU.calibrateMPU9250(IMU.gyroBias, IMU.accelBias);
   IMU.initMPU9250();
   IMU.initAK8963(IMU.magCalibration);
 
+  //Remove any bias corrections
   IMU.magbias[0] = 0.0; IMU.magbias[1] = 0.0; IMU.magbias[2] = 0.0;
 
   M5.Lcd.setTextSize(1);
@@ -28,6 +44,8 @@ void setup(){
 }
 
 void updateIMU() {
+
+  //check to see if new data is available
   if (IMU.readByte(MPU9250_ADDRESS, INT_STATUS) & 0x01) {
     
     //Read and scale the acc data
@@ -55,46 +73,29 @@ void updateIMU() {
   }
 }
 
-void updatePitchYawRoll() {
-  IMU.yaw   = atan2(2.0f * (*(getQ()+1) * *(getQ()+2) + *getQ() *
-                *(getQ()+3)), *getQ() * *getQ() + *(getQ()+1) * *(getQ()+1)
-                - *(getQ()+2) * *(getQ()+2) - *(getQ()+3) * *(getQ()+3));
-  IMU.pitch = -asin(2.0f * (*(getQ()+1) * *(getQ()+3) - *getQ() *
-                *(getQ()+2)));
-  IMU.roll  = atan2(2.0f * (*getQ() * *(getQ()+1) + *(getQ()+2) *
-                *(getQ()+3)), *getQ() * *getQ() - *(getQ()+1) * *(getQ()+1)
-                - *(getQ()+2) * *(getQ()+2) + *(getQ()+3) * *(getQ()+3));
-  IMU.pitch *= RAD_TO_DEG;
-  IMU.yaw   *= RAD_TO_DEG;
-  // Declination of SparkFun Electronics (40°05'26.6"N 105°11'05.9"W) is
-  //   8° 30' E  ± 0° 21' (or 8.5°) on 2016-07-19
-  // - http://www.ngdc.noaa.gov/geomag-web/#declination
-  IMU.yaw   -= 8.5;
-  IMU.roll  *= RAD_TO_DEG;
-}
-
 void loop()
 {
   updateIMU();
 
+  //record the min and max values
   maxx = _max(IMU.mx, maxx); minx = _min(IMU.mx, minx);
   maxy = _max(IMU.my, maxy); miny = _min(IMU.my, miny);
   maxz = _max(IMU.mz, maxz); minz = _min(IMU.mz, minz);
 
+  //calculate the offets (bias)
   biasx = (maxx + minx)/2;
   biasy = (maxy + miny)/2;
   biasz = (maxz + minz)/2;
 
+  //calculate the scale
   scalex = (maxx - minx)/2;
   scaley = (maxy - miny)/2;
   scalez = (maxz - minz)/2;
-
   float scale = (scalex + scaley + scalez)/3.0;
   scalex = scale/scalex;
   scaley = scale/scaley;
   scalez = scale/scalez;
 
-  // Serial print and/or display at 0.5 s rate independent of data rates
   IMU.delt_t = millis() - IMU.count;
 
   // update LCD once per half-second independent of read rate

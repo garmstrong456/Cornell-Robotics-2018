@@ -6,19 +6,21 @@ BamBotMotorDriver motors;
 Adafruit_MCP23008 mcp;
 
 /*
- * Note there are two possible default wiring setups:
+ * drive_with_MCP
+ * 
+ * Greg Armstrong June 2018
+ * 
+ * Bambot motor drive demonstration with the motor direction pins connected to the MCP
+ * 
+ * ----------------------
+ * Wiring for this sketch
+ * ----------------------
  * 
  * With MCP23008:
  * EN_A --> M5Stack GPIO 3/R0 (speed pin)
  * EN_B --> M5Stack GPIO 1/T0 (speed pin)
  * PH_A --> MCP 7 (direction pin)
  * PH_B --> MCP 6 (direction pin)
- * 
- * Without MCP23008:
- * EN_A --> M5Stack GPIO 3/R0  (speed pin)
- * EN_B --> M5Stack GPIO 17/R2 (speed pin)
- * PH_A --> M5Stack GPIO 1/T0  (direction pin)
- * PH_B --> M5Stack GPIO 16/T2 (direction pin)
  * 
  * See the other example for guidelines on how to initialize motors without the MCP
  */

@@ -6,7 +6,15 @@ BamBotMotorDriver motors;
 Adafruit_MCP23008 mcp;
 
 /*
+ * drive_with_encoders
+ * 
+ * Greg Armstrong July 2018
+ * 
+ * Drive back and forth while displaying the current position of the encoders
+ * 
+ * ----------------------
  * Wiring for this sketch
+ * ----------------------
  * 
  * Motor Wires
  * EN_A --> M5Stack GPIO 3/R0 (speed pin)

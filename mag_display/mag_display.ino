@@ -71,15 +71,6 @@ void loop()
 {
   updateIMU();
 
-  // Must be called before updating quaternions!
-  IMU.updateTime();
-
-  MahonyQuaternionUpdate(IMU.ax, IMU.ay, IMU.az, IMU.gx*DEG_TO_RAD,
-                         IMU.gy*DEG_TO_RAD, IMU.gz*DEG_TO_RAD, IMU.my,
-                         IMU.mx, IMU.mz, IMU.deltat);
-  
-  updatePitchYawRoll();
-
   // Serial print and/or display at 0.5 s rate independent of data rates
   IMU.delt_t = millis() - IMU.count;
 
@@ -98,8 +89,6 @@ void loop()
     M5.Lcd.printf("% 6d  % 6d  % 6d      o/s  \r\n", (int)(IMU.gx), (int)(IMU.gy), (int)(IMU.gz));
     M5.Lcd.setCursor(0,  64);
     M5.Lcd.printf("% 6d  % 6d  % 6d     mG    \r\n",  (int)(IMU.mx), (int)(IMU.my), (int)(IMU.mz));
-    M5.Lcd.setCursor(0,  94);
-    M5.Lcd.printf("  yaw: % 5.2f    pitch: % 5.2f    roll: % 5.2f   \r\n",(IMU.yaw), (IMU.pitch), (IMU.roll));
 
     M5.Lcd.setCursor(12, 144); 
     M5.Lcd.print("rt: ");
