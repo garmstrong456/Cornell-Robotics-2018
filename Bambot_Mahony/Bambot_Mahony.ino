@@ -74,7 +74,7 @@ void readAndScaleIMU() {
 
   IMU.readMagData(IMU.magCount);
   IMU.getMres();
-  IMU.mx = (float)IMU.magCount[0]*IMU.mRes*IMU.magCalibration[0] - magBiasX;
-  IMU.my = (float)IMU.magCount[1]*IMU.mRes*IMU.magCalibration[1] - magBiasY;
-  IMU.mz = (float)IMU.magCount[2]*IMU.mRes*IMU.magCalibration[2] - magBiasZ;
+  IMU.mx = (float)IMU.magCount[0]*IMU.mRes*IMU.magCalibration[0] - IMU.magbias[0];
+  IMU.my = (float)IMU.magCount[1]*IMU.mRes*IMU.magCalibration[1] - IMU.magbias[1];
+  IMU.mz = (float)IMU.magCount[2]*IMU.mRes*IMU.magCalibration[2] - IMU.magbias[2];
 }
