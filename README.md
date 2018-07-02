@@ -1,6 +1,10 @@
 # Cornell Robotics 2018
 ### Example code and other resources for the Cornell Summer College class "Fabricating the Future"
 
+Alternate download link for the Windows Arduino ESP32 IDE
+
+https://drive.google.com/drive/folders/1ta2pXv-UpummTKtDSyMnSE21q8yQf27s?usp=sharing
+
 #### Instructions
 If you're comfortable with Git the best way to keep up to date with this code is to clone the repository. Follow the instructions here:
 [Cloning a Repository](https://help.github.com/articles/cloning-a-repository/).
