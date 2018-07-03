@@ -1,6 +1,9 @@
 # Cornell Robotics 2018
 ### Example code and other resources for the Cornell Summer College class "Fabricating the Future"
 
+Build Instructions:
+https://docs.google.com/presentation/d/1Q2dMI2MtRwDjKAeJuK9opQevz0_zp-j7ozcgcgmdrMA/edit?usp=sharing
+
 Alternate download link for the Windows Arduino ESP32 IDE
 
 https://drive.google.com/drive/folders/1ta2pXv-UpummTKtDSyMnSE21q8yQf27s?usp=sharing
