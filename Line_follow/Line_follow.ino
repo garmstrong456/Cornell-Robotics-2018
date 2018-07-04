@@ -27,7 +27,7 @@ BamBotMotorDriver motors;
 Adafruit_MCP23008 mcp;
 
 void setup() {
-  M5.begin();
+  M5.begin(true, false);    //initialize the M5 with the SD card disabled
 
   mcp.begin();
   motors.init(mcp);
