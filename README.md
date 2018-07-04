@@ -1,6 +1,9 @@
 # Cornell Robotics 2018
 ### Example code and other resources for the Cornell Summer College class "Fabricating the Future"
 
+Electronics Guide
+https://docs.google.com/presentation/d/1RXKADt4pPwjaFT5l_wq1-40EfGdY3vQ4dFg0_OxjQOs/edit?usp=sharing
+
 Build Instructions:
 https://docs.google.com/presentation/d/1Q2dMI2MtRwDjKAeJuK9opQevz0_zp-j7ozcgcgmdrMA/edit?usp=sharing
 
