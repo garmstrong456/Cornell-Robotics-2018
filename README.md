@@ -3,6 +3,9 @@
 
 #### Useful links and documentation
 
+Robot Motor Sizing Tutorial:
+https://www.robotshop.com/blog/en/drive-motor-sizing-tutorial-3661
+
 Bambot and M5Stack pin summary:
 https://drive.google.com/open?id=1gGa5mbhSfZkcndAggLj7LRP0fLRiW5C7YToWunI0xs0
 
