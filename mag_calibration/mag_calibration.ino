@@ -65,9 +65,9 @@ void updateIMU() {
     //Read and scale the mag data
     IMU.readMagData(IMU.magCount);
     IMU.getMres();
-    IMU.mx = magScale_x*((float)IMU.magCount[0]*IMU.mRes*IMU.magCalibration[0] - IMU.magbias[0]);
-    IMU.my = magScale_y*((float)IMU.magCount[1]*IMU.mRes*IMU.magCalibration[1] - IMU.magbias[1]);
-    IMU.mz = magScale_z*((float)IMU.magCount[2]*IMU.mRes*IMU.magCalibration[2] - IMU.magbias[2]);
+    IMU.mx = (float)IMU.magCount[0]*IMU.mRes;
+    IMU.my = (float)IMU.magCount[1]*IMU.mRes;
+    IMU.mz = (float)IMU.magCount[2]*IMU.mRes;
 
 
   }
