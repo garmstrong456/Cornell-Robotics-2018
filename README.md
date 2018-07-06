@@ -1,8 +1,13 @@
 # Cornell Robotics 2018
 ### Example code and other resources for the Cornell Summer College class "Fabricating the Future"
 
-Electronics Guide
-https://docs.google.com/presentation/d/1RXKADt4pPwjaFT5l_wq1-40EfGdY3vQ4dFg0_OxjQOs/edit?usp=sharing
+#### Useful links and documentation
+
+Bambot and M5Stack pin summary:
+https://drive.google.com/open?id=1gGa5mbhSfZkcndAggLj7LRP0fLRiW5C7YToWunI0xs0
+
+Electronics Guide:
+https://drive.google.com/open?id=1RXKADt4pPwjaFT5l_wq1-40EfGdY3vQ4dFg0_OxjQOs
 
 Build Instructions:
 https://docs.google.com/presentation/d/1Q2dMI2MtRwDjKAeJuK9opQevz0_zp-j7ozcgcgmdrMA/edit?usp=sharing
@@ -11,7 +16,7 @@ Alternate download link for the Windows Arduino ESP32 IDE
 
 https://drive.google.com/drive/folders/1ta2pXv-UpummTKtDSyMnSE21q8yQf27s?usp=sharing
 
-#### Instructions
+#### How to get this code (and other git repositories)
 If you're comfortable with Git the best way to keep up to date with this code is to clone the repository. Follow the instructions here:
 [Cloning a Repository](https://help.github.com/articles/cloning-a-repository/).
 
