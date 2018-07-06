@@ -36,7 +36,7 @@ int kp = 2, kd = 0;
 
 //****************************************
 
-int error = 0, lastError = 0;
+int err = 0, lastError = 0;
 int speedCorrection;
 int m1Speed, m2Speed;
 bool usePID = true;
@@ -63,9 +63,9 @@ void loop() {
   //PID controll
   if (usePID) {
   
-    error = motors.motor2Position() - motors.motor1Position();
-    speedCorrection = kp*error + kd*(error - lastError);
-    lastError = error;
+    err = motors.motor2Position() - motors.motor1Position();
+    speedCorrection = kp*err + kd*(err - lastError);
+    lastError = err;
 
     //Keep the speeds within the user defined limits
     m1Speed = constrain(BASE_SPEED + speedCorrection, MIN_SPEED, MAX_SPEED);
@@ -79,7 +79,7 @@ void loop() {
   //Set the motor speeds
   motors.setSpeeds(m1Speed, m2Speed);
 
-  M5.Lcd.setCursor(0, 0,2); M5.Lcd.printf("error: %6d   ", error);
+  M5.Lcd.setCursor(0, 0,2); M5.Lcd.printf("error: %6d   ", err);
   M5.Lcd.setCursor(0,15,2); M5.Lcd.printf("speed correction: %6d   ", speedCorrection);
   M5.Lcd.setCursor(0,30,2); M5.Lcd.printf("motor speeds: %6d  %6d   ", m1Speed, m2Speed);
   M5.Lcd.setCursor(0,45,2); M5.Lcd.printf("encoder values: %6d  %6d   ", motors.motor1Position() - motors.motor2Position());

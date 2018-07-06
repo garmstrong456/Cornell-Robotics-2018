@@ -20,7 +20,7 @@ float lastError = 0;
 //Create an object for your line sensor
 //uses pins 18, 19, 23 meaning this sketch is incompatible with using the SD
 //card or any other SPI device
-QTRSensorsRC qtr((unsigned char[]) {18, 19, 23}, 3);
+QTRSensorsRC qtr((unsigned char[]) {16, 17, 2}, 3);
 
 //Create the motor objects
 BamBotMotorDriver motors;
