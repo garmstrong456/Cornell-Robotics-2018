@@ -45,11 +45,11 @@ void setup() {
 //Drive back and forth
 //Use this to check and see if one or both of your motors need to be reversed
 void loop() {
-  motors.setSpeeds(300, 300);
+  motors.setSpeeds(100, 100);
   M5.Lcd.setCursor(0,0,2); M5.Lcd.print("Forward");
   delay(1000);
-  motors.setM1Speed(-300);
-  motors.setM2Speed(-300);
+  motors.setM1Speed(0);
+  motors.setM2Speed(0);
   M5.Lcd.setCursor(0,0,2); M5.Lcd.print("Reverse");
   delay(1000);
 }
