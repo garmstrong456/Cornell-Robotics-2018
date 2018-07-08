@@ -3,6 +3,8 @@
 
 #### Useful links and documentation
 
+Weekend Design Challenge: https://docs.google.com/presentation/d/1Hv4F7Afax5wgMpNy3sY5FvtgueQv0MMicbO37gzj8J0/edit?usp=sharing
+
 Robot Motor Sizing Tutorial:
 https://www.robotshop.com/blog/en/drive-motor-sizing-tutorial-3661
 
