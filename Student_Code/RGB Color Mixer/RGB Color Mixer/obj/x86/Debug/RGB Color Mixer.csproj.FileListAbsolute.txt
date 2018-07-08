@@ -1,0 +1,9 @@
+c:\users\curtis\documents\visual studio 2010\Projects\RGB Color Mixer\RGB Color Mixer\bin\Debug\RGB Color Mixer.exe
+c:\users\curtis\documents\visual studio 2010\Projects\RGB Color Mixer\RGB Color Mixer\bin\Debug\RGB Color Mixer.pdb
+c:\users\curtis\documents\visual studio 2010\Projects\RGB Color Mixer\RGB Color Mixer\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\curtis\documents\visual studio 2010\Projects\RGB Color Mixer\RGB Color Mixer\obj\x86\Debug\RGB_Color_Mixer.RGBmixer.resources
+c:\users\curtis\documents\visual studio 2010\Projects\RGB Color Mixer\RGB Color Mixer\obj\x86\Debug\RGB_Color_Mixer.Properties.Resources.resources
+c:\users\curtis\documents\visual studio 2010\Projects\RGB Color Mixer\RGB Color Mixer\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\curtis\documents\visual studio 2010\Projects\RGB Color Mixer\RGB Color Mixer\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\curtis\documents\visual studio 2010\Projects\RGB Color Mixer\RGB Color Mixer\obj\x86\Debug\RGB Color Mixer.exe
+c:\users\curtis\documents\visual studio 2010\Projects\RGB Color Mixer\RGB Color Mixer\obj\x86\Debug\RGB Color Mixer.pdb
