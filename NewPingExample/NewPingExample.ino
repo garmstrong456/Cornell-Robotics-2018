@@ -2,6 +2,7 @@
 // Example NewPing library sketch that does a ping about 20 times per second.
 // ---------------------------------------------------------------------------
 
+#define DO_BITWISE true
 #include <NewPing.h>
 
 #define TRIGGER_PIN  12  // Arduino pin tied to trigger pin on the ultrasonic sensor.
