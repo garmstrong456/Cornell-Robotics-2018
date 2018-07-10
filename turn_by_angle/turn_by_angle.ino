@@ -2,10 +2,10 @@
 #include "utility/MPU9250.h"
 #include "BamBotMotorDriver.h"
 #include "Adafruit_MCP23008.h"
-#include <GregMahony.h>
+#include <BambotAHRS.h>
 #include <Wire.h>
 
-GregMahony AHRSfilter;
+Mahony AHRSfilter;
 MPU9250 IMU;
 BamBotMotorDriver motors;
 Adafruit_MCP23008 mcp;
