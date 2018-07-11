@@ -3,6 +3,8 @@
 
 #### Useful links and documentation
 
+Useful library that reads and scales the IR distance sensor: https://github.com/jadr2ddude/SharpDist
+
 Weekend Design Challenge: https://docs.google.com/presentation/d/1Hv4F7Afax5wgMpNy3sY5FvtgueQv0MMicbO37gzj8J0/edit?usp=sharing
 
 Robot Motor Sizing Tutorial:
