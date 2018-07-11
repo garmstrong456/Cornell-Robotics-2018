@@ -1,5 +1,5 @@
 /*
- * PLEASE VIEW "Information.md" BEFORE STARTING!!!
+ * PLEASE VIEW "README.md" BEFORE STARTING!!!
  * 
  * Required Libraries:
  * Blynk (https://github.com/blynkkk/blynk-library)
