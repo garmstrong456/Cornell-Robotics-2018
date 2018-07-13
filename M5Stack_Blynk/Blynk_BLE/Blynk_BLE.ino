@@ -1,10 +1,13 @@
 /*
- * PLEASE VIEW "Information.md" BEFORE STARTING!!!
- * 
  * Required Libraries:
  * Blynk (https://github.com/blynkkk/blynk-library)
  * BamBotMotorDriver (https://github.com/garmstrong456/BamBotMotorDriver)
  * Adafruit-MCP23008 (https://github.com/adafruit/Adafruit-MCP23008-library)
+ * ESP32-BLE (https://github.com/nkolban/ESP32_BLE_Arduino)
+ * M5Stack (https://goo.gl/gBB9vF)
+ *
+ * How to manually install these libraries: https://www.arduino.cc/en/guide/libraries#toc5
+ * The M5Stack library download contains changes important for compatibility with Blynk!
  * 
  * Setup:
  * Enable Bluetooth in your mobile device's settings.
